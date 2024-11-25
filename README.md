@@ -733,58 +733,60 @@ startActivity(i);
 	load()
 	getpage()
 	loadUrl()
+
 41.	Koju komponetnu sa palete dizajn editora treba izabrati da se uključi u xml layout fajl kako bi u korisnički interfejs aplikacije uključili ispis nekog teksta?
-	textView
+textView
 
 42.	Koliko dugo će ostati na ekranu pop-up poruka čije je trajanje zadato sa ''Toast.LENGHT_LONG“?
-	2 sekunde
-	3.5 sekundi
-	1 sekund 
-	5 sekundi
+2 sekunde
+3.5 sekundi
+1 sekund 
+5 sekundi
 
 43.	Razlog za izbor starijeg izdanja SDK-a/API-a je taj što osigurava da će gotova aplikacija biti u mogućnosti da se pokreće na širem opsegu Android uređaja
-	Tačno
-	Netačno
+Tačno
+Netačno
 
 44.	Definisali ste SeekBar na ekran vaše aktivnosti na sljedeći način:
 SeekBar mojSeekBar=(SeekBar)findViewByld (R. id. mojSeekBar)
 Da bi zadali maksimalnu vrijednost koju može imati gornji SeekBar poziva se metoda:
-	mojSeekBar.setMax();
+mojSeekBar.setMax();
 
 45.	Ulazna tačka za interakciju Android aplikacije sa korisnikom putem korisničkog interfejsa je:
-	aktivnost (activity)
+aktivnost (activity)
 
 46.	Za razliku od drugih sistema, kod Androida nema jedne ,,ulazne tačke” u aplikaciju(ne postoji main()funkcija)
-	Tačno
+Tačno
 
 47.	Koju komponentu sa palete dizajn editora treba izabrati da se uključi u XML layout fajl kako bi u korisnički interfejs vaše aplikacije uključili oblast za prikazivanje web stranice?
-	WebView
+WebView
 
 48.	Ukoliko želimo da iz naše Android aplikacije pošaljemo SMS, koristićemo aplikaciju za slanje SMS-A koja je već instalirana na Android uređaju, koristićemo:
-	implicitni intent
+implicitni intent
 
 49.	U kom fajlu se opisuju osnovne karakteristike aplikacije i definiše svaka njena komponenta?
-	AndroidManifest.xml
+AndroidManifest.xml
 
 50.	Kako se u XML layout fajlu zadaje da sadržaj ImageView-a bude slika.jpg?
-	android:src=@drawable/ slika
+android:src=@drawable/ slika
 
 51.	U res/raw folderu se nalazi audio fajl moja_muzika.mp3. Kreiran je objekat Media Player klase MediaPlayer.create(this, R.raw.ime_fajla): Započeta je reprodukcija ovog audio fajla. Ukoliko želimo da se reprodukcija automatski nastavi radimo:
-	dzuboks.set Looping(true)
+dzuboks.set Looping(true)
 
 52.	Android Studio omogućava programiranje aplikacija korišćenjem sljedećih programskih jezika?
-	Java
-	C++
-	Kotlin
+Java
+C++
+Kotlin
+
 53.	Android aplikacija može pokrenuti komponentu druge aplikacije?
-	slanjem poruke OS-u kojom se izražava namjera (intent) da se pokrene određena komponenta
+slanjem poruke OS-u kojom se izražava namjera (intent) da se pokrene određena komponenta
 
 54.	Prije pokretanja Android aplikacije na virtuelnom uređaju (emulatoru), morate povezati pametni telefon ili tablet na vaš PC.
-	Netačno
+Netačno
 
 55.	Označiti tačne iskaze vezane za Android emulator?
-	pokretanje aplikacije na emulatoru traje duže nego kod realnog hardvera
-	može se konfigurisati više različitih emulatora sa odgovarajućim parametrima npr: različitim veličinama
+pokretanje aplikacije na emulatoru traje duže nego kod realnog hardvera
+može se konfigurisati više različitih emulatora sa odgovarajućim parametrima npr: različitim veličinama
 
 56.	Koja metoda Toast klase omogućava prikazivanje pripremljene pop-up poruke: 
 Show()
@@ -820,8 +822,6 @@ u javi : r.string.ključ
 65.	Kako se pravi lista sa različitim elementima?
 koristi se ListView kontenjer widget
 pomoću ArrayAdapter-a
-
-
 
 66.	Kako predstaviti sliku na pozadini ekrana? 
 u xml-u: android:background=“@drawable/slika“
@@ -869,7 +869,6 @@ AndroidManifest.xml
 79.	U res/raw folderu se nalazi audio fajl moj_muzika.mp3. Kreiran je objekat MediaPlayer klase: MediaPlayer muzika=MediaPlayer.create(this, R.raw.moja_muzika), Započinjanje reprodukcije se vrši pozivom metode?
 Muzika.Start()
 
-
 80.	Sta je URI?
 Uniform resource identifier
 
@@ -895,5 +894,3 @@ findViewById()
 SeekBar mojSeekBar=(SeekBar)findViewById(R.id.mojSeekBar);
 Da bi gornji SeekBar bio zapravo ciklična animacija, bez stvarne indikacije o progresu, potrebno je u XML fajlu zadati njegov atribut na sljedeći način: 
 android:indeterminate="true"
-
-
