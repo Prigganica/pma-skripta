@@ -467,3 +467,433 @@ Intent
 32.	Ukoliko želimo da dugme (widget ImageButton) ima drugačiju sliku kada je pritisnuto, potrebno je kreirati XML fajl u kome se nalaze informacije o fajlovima sa slikama i povezati ga sa atributom srcCompat.
 Tačno
 33.	Tokom izvršavanja servisa potrebno je prenijeti nekoliko fajlova sa interneta. U tu svrhu se metodi doinBackground() prosleđuje niz URL objekata. Metoda izgleda ovako.. Umjesto ***** treba da stoji: (urls[1])
+
+
+
+PMA – kolokvijum
+
+1.	 U XML layout ste specificirali da se dodirom dugmeta (onClick) poziva metoda nazvana uradiNesto. U java fajlu ste kreirali metodu “public void uradiNesto(View v)”. Na šta se odnosi parameter “v”?
+	Ukazuje na orijentaciju ekrana uređaja (portrait - landscape)
+	Odnosi se na grafičke postavke koje je postavio korisnik
+	Ukazuje na view koji je uzrokovao poziv metode
+	Upućuje na layout na kojem se dugme nalazi
+
+2.	Definisali ste SeekBar na ekranu vaše aktivnosti na sljedeći način:
+SeekBar mojSeekBar=(SeekBar)findViewByld(R.id.mojSeekBar)
+ Da bi saznali trenutnu vrijednost koja je zadata pomoću gornjeg SeekBar-a poziva se metoda...
+	mojSeekBar.setProgress()
+	mojSeekBar.getMax()
+	mojSeekBar.setMax()
+	mojSeekBar.getProgress()
+
+3.	Koliko dugo će ostati na ekranu pop-up poruka čije je trajanje zadato sa “loast.LENGTH_SHORT”?
+	2 sekunde
+
+4.	Kako se u java kodu zadaje da sadrzaj ImageView-a bude slika.jpg?
+	mojImageView.setImageResource(R.drawable.slika.jpg)
+	mojImageView.setImageResource(@drawable/slika)
+	mojImageView.setImageResource(R.drawable.slika)
+	mojImageView.findViewByld(R.drawable.slika)
+
+5.	Dugme se moze postaviti na ekran…
+	Upisom u xml fajl ili dinamicki kroz, java kod
+	Iskljucivo upisom u xml fajl
+	Iskljucivo dinamicki, kroz java kod
+
+6.	Definisali ste SeekBar na ekranu vaše aktivnosti na sljedeći način:
+SeekBar mojSeekBar=(SeekBar)findViewByld(R.id.mojSeekBar)
+ Da bi saznali default vrijednost koju ce imati gornji SeekBar kada se startuje aktivnost, poziva se metoda...
+	mojSeekBar.setProgress()
+	mojSeekBar.getMax()
+	mojSeekBar.setMax()
+	mojSeekBar.getProgress()
+
+7.	Android emulatoru (koji je dio Android studija) se moze pristupiti spolja, preko telnet sesije.
+	Tacno
+	Netacno
+
+8.	Koju komponentu sa palete dizajn editora treba izabrati da se ukljuci u xml layout fajl kako bi se u korisnicki interfejs aplikacije ukljucilo preko koga korisnik moze da umetne sliku na odgovarajuce mjesto?
+	ImageView
+
+
+9.	Koja je namjena AVD-a?
+	Modifikacija korisnickog interfejsa aplikacije
+	Uredjivanje i prevodjenje Android aplikacija
+	Pokretanje i testiranje Android aplikacija u emulatoru
+
+10.	Android je visekorisnicki Linux operativni sistem kod kojega je svaka aplikacija po jedan korisnik?
+	Tacno
+	Netacno
+
+11.	Toast.makeText(getApplicationContext(), ''Poruka'',**********).show()
+U gornjoj liniji koda, umjesto zvezdica makeText ocekuje...
+	Boju pozadine pop-up poruke (Color.BLUE, Color.BLACK,...)
+	Prioritet poruke (Toast.URGENT ili Toast.NON_URGENT)
+	Trajanje prikaza poruke (Toast.LENGTH_SHORT ili Toast.LENGTH_LONG)
+	Poziciju na kojoj se ispisuje poruka (Toast.TOP, Toast.CENTER, ili Toast.BOTTOM)
+
+12.	 Koji je naziv metode MainActivity klase koja podesava i prikazuje ekran sa korisnickim interfejsom aplikacije?
+	onStart()
+	run()
+	onCreate()
+	main()
+
+13.	Definisali ste SeekBar na ekranu vaše aktivnosti na sljedeći način:
+SeekBar mojSeekBar=(SeekBar)findViewByld(R.id.mojSeekBar)
+Zelite da se na klizacu, umjesto default-nog dugmeta, nadje simbol iz fajla moja_slika.png koji je smjesten u odgovarajucem resursnom folderu. Zeljeni rezultat cete postici tako sto u XML fajlu odgovarajuce aktivnosti definisete...
+	android:thumb=“@res/moja_slika“
+	android:thumb=“@drawable/moja_slika“
+	android:image=“@drawable/moja_slika“
+	android:image=“@res/moja_slika“
+
+14.	Sadrzaj konfiguracionog fajla koji se zove starost.xml izgleda ovako:
+<?xml verison=“1.0“...>
+....
+</map>
+Sta ce biti sadrzaj ovog fajla nakon izvrsavanja sljedeceg koda?
+Final SharedPreferences konfiguracija = ....
+....
+Editor.commit();
+	Sadrzaj se nece promijeniti jer ce se aplikacija prestati sa radom usljed greske, zbog toga sto se u fajlu vec nalazi kljuc ''godina''
+	Sadrzaj se nece promijeniti jer u fajlu vec postoji vrijednosti za podatak oznacen sa ''godina'
+	Sadzaj se nece promijeniti jer nesto nedostaje u prikazanom kodu
+	Sadrzaj ce biti:
+<?xml version....
+ ...
+</map>
+15.	Definisali ste korisnicki interfejs u XML layout fajlu koji ste nazvali myUI.xml. Kreirati novu aktivnost u fajlu MyActivity.java. Kako specificirati da MyActivity prikaze myUL?
+	U onCreate metod u fajlu MyActivity.java poziva se setContentView metoda (bez navodjenja parametra) i u myUL.xml fajlu specificiramo android:activity=“MyActivity“
+	U onCreate metod u fajlu MyActivity.java poziva se onStart metoda i prosledjuje joj se paramtera ''R.id.myUl''
+	U onCreate metod u fajlu MyActivity/java koristi se ''R.id.myUL.display()''
+	U onCreate merodi u fajlu MyActivity.java poziva se setContentView metoda i prosledjuje joj se parametar “R.layout.myUL“
+
+16.	Kao i kod nekih drugih sistema, kod Androida se izvrsavanje aplikacije zapocinje od main() funkcije:
+	Tacno
+	Netacno
+
+17.	Vizuelna struktura korisnickog interfejsa se moze definisati...
+	Iskljucivo iz java koda, kreiranjem View ili ViewGroup objekata
+	Ili iz java koda ili iz XML fajla, ali ne iz oba za jedan isti ekran
+	Iskljucivo iz XML fajla, navodjenjem razlicitih widget-a
+	Ili iz java koda ili iz XML fajla, moze i kombinovano
+
+18.	Dat je kod:
+public:void posaljiPoruku(View..?){
+      String poruka = ((/Edit…()ViewByld(R.id editText_poruka)).getText().toString();
+      Url odrediste = Url…….?
+      Intent ……=new Intent(Intent ACTION_SENDTO.odrediste);
+      smsIntent….?
+      startActivity(smsIntent);
+}
+	U gornjem kodu nema ispravnog Intent-a jer nije naveden kontekst
+	U gornjem kodu se nalazi eksplicitni intent
+	U gornjem kodu se nalazi implicitni Intent
+	U gornjem kodu nema ispravnog Intent-a jer nije navedena adresa servera
+
+19.	Ako kreirate string u XML fajlu (strings.xml), kako mozete referencirati taj string iz drugog XML fajla (na primjer iz activity_main.xml)?
+	Ako se string zove “moj_string“, referencira se kao @string/moj_string
+	Koristi se Activity.findViewByld() metoda
+	Ako se string zove “moj_string“, referencira se kao R.string.moj_string
+	Ne moze se referencirati. Resurs kreiran u XML fajlu moze se referencirati samo iz java koda
+
+20.	Sta je Android SDK?
+	Software development kit – alat za razvoj Android aplikacija
+	Super droid key – kljuc za otkljucavanje Root naloga na Androidu
+	Standard definition kit – skup standardnih definicija koje se upisuju u Manifest
+	Standard keyboard – osnovna tastatura koja se pojavljuje pri unosa podataka u aplikaciju
+
+
+
+21.	Kako da popunite ListView?
+	Iskoristite addChild(View v) metod
+	Iskoristite addlte(String s) metod
+	Iskoristite ArrayAdapter koji kreira TextView za svaki clan polja stringova i veze ih za ListView
+
+22.	Sledeci kod prikazuje pop-up poruku koja za kratko vrijeme prikazuje tekst ''zdravo'':
+Toast.makeText(getApplicationContext(), ''zdravo'', Toast.LENGTH_SHORT)
+	Tacno
+	Netacno
+
+23.	U kojem folderu Android studio projekta se nalaze XML fajlovi koji definisu izgled korisnickog interfejsa razvijane aplikacije?
+	App/manifests
+	App/res/layout
+	App/java
+	App/res/drawable
+
+24.	Koja od ponudjenih su ispravna imena za MP3 fajlove smjestene u resurs folder?
+	MojaMuzika
+	10_mojamuzika
+	moja_muzika
+	mojamuzika2
+	_moja_muzika
+	Mojamuzika
+
+25.	Sta morate uraditi da bi vas WebView mogao prikazati web stranicu koja se nalazi na Internetu?
+	Deklarisete da aplikacija treba dozvolu za pristup Internetu
+	Deklarisete da aktivnost u kojoj se nalazi WebView treba dozvolu za pristup Internetu.
+
+26.	Prilikom generisanja nove aktivnosti Android studio unutar onCreate () metode umece poziv metode setContentView(R.layout.naziv_aktivnosti);
+Metoda setContentView() sluzi da se…
+	Referenciraju widget-i(views ) kojima ce se pristupati iz xml fajlova.
+	Definise izgled (layout) ekrana aktivnosti
+	Referenciraju widget-i(views ) kojima ce se pristupati iz java koda.
+	Definisu stringovi koji ce se koristiti u aplikaciji
+
+27.	Dugmetu pozicioniranom na ekranu pomocu xml layout fajla se…
+	Moze se pridruziti neka akcija iskljucivo definisanjem onClic atributa u xml fajlu,gdje ce atribut biti povezan sa metodom….pozvati kada se fugme pritisne.
+	Moze pridruziti neka akcija ili u xml fajlu definisanjem onClick atributa povezanog sa metodom koju treba pozvati ..pritisne, ili u java kodu tako sto ce se za dugme “zakaciti” OnClickListener
+	Moze priduziti neka akcija iskljucivo u java kodu tako sto ce se za dugme “zakaciti” OnClickListener…
+
+
+
+
+28.	Kada jedna aktivnost zeli da pokrene drugu aktivnost ona kreira objekat koji specificira koju aktivnost ili koji tip aktivnosti zali da pokrene. Koji je tip ovog objekta?
+	Intent
+	Activity
+	Thread
+	BroadcastReceiver
+
+29.	Koja je od ove četiri osnovne komponente android aplikacija dizajnirana za obavljanje operacija koje se izvršavaju u pozadini ili za obavljanje poslova za udaljene procese? 
+Izaberite jedan odgovor:
+	Service 
+	Activity
+	BroadcastReciver
+	ContentProvider
+
+30.	Na ekranu korisničkog interfejsa aktivnosti nalazi se EditText widget čiji je naziv (ID) editText.Isti je deklarisan i referenciran na sljedeći način:
+EditText mojEditTekst = (EditText) findViewByID(R.id.editText);
+Da bi se tekstualni sadržaj ovog widget-a smjestio u String promjenljivu poruka, potrebno je izvršiti sljedeću liniju koda:
+	String poruka = editTekst.getText().toString();
+	String poruka = mojEditTekst.toString();
+	String poruka = mojEditTekst.getText().toString;
+	String poruka = mojEditTekst.getText();
+
+31.	Komponente Android aplikacije su:
+	Aktivnosti
+	Servisi
+	Android emulatori?
+	Manifesti?
+
+32.	U kojem fajlu specificirate dozvole (permissions) koje zahtijeva aplikacija?
+	AndroidManifest.xml
+	ActivityMain.xml
+	styles.xml
+	activity_main.xml
+
+33.	Ulazna tačka opšte namjene za aplikaciju koja se pokreće u pozadini, za obavljanje dugotrajnih operacija ili za obavljanje poslova za udaljene procese, je...
+	Aktivnost(Activity)
+	Content provider 
+	Broadcast receiver
+	Servis(service)
+
+
+
+
+34.	Na ekranu neke aktivnosti se nalazi widget sa nazivom mojWidget. Ukoliko želite da se taj widget ne vidi (želite da ga sakrijete) pozvaćete sljedeću metodu: 
+	mojWidget.setVisibility(View.INVISIBLE);
+	mojWidget.setVisibility(View.VISIBLE);
+	mojWidget.setinvisibility(true);
+	mojWidget.setinvisibiality(false);
+
+35.	Dat je sljedeći kod: 
+Public static final String MESSAGE = ''com.example.mojprviprojekat.PORUKA'';
+Public void posaljiPORUKU(View v) {
+Intent i = new Intent(PrikaziPoruku.class);
+EditText editTekst = (EditText)findViewById(R.id.editText);
+String poruka = editTekst.getTekst().toString();
+i.putExtra(MESSAGE, poruka);
+startActivity(i);
+  }
+	u kojem kodu se nalazi eksplicitni intent
+36.	Koji layout omogućava da specifirate položaj widget-a koristeći druge widget-e kao referentne tačke:
+	RelativeLayout
+	TableLayout
+	GridLayout
+	LinearLayout
+
+37.	Logcat prozor prikazuje log poruke generisane od strane programa koji se izvršava na...
+	Android uređaju koji je povezan sa računarom.
+	Emulatore
+	Laptopu
+	Desktop računaru.
+
+38.	Šta bi moglo biti razlog da se neki widget (npr dugme) kreira iz java koda, a ne u XML layout fajlu?
+	Na taj način se koristi manje linija koda
+	Na taj način se omogućava da se widget-u pridruži tekst koji se mijenja saglasno izabranom jeziku u podešavanju Android uređaja
+	Na taj način se omogućava da se widget kreira samo ako je zadovoljen neki uslov za vrijeme izvršavanja aplikacije
+
+39.	Layout kod koga je ekran podijeljen u kolone i svaka kolona može prihvatiti widget(e) onim redom kojim su navedeni je ..
+	relativeLayout
+	ConstantLayout
+	Vertical LinearLayout
+	Horizontal LinearLayout
+
+40.	Koji metod WebView klase učitava web stranicu?
+	getweb()
+	load()
+	getpage()
+	loadUrl()
+41.	Koju komponetnu sa palete dizajn editora treba izabrati da se uključi u xml layout fajl kako bi u korisnički interfejs aplikacije uključili ispis nekog teksta?
+	textView
+
+42.	Koliko dugo će ostati na ekranu pop-up poruka čije je trajanje zadato sa ''Toast.LENGHT_LONG“?
+	2 sekunde
+	3.5 sekundi
+	1 sekund 
+	5 sekundi
+
+43.	Razlog za izbor starijeg izdanja SDK-a/API-a je taj što osigurava da će gotova aplikacija biti u mogućnosti da se pokreće na širem opsegu Android uređaja
+	Tačno
+	Netačno
+
+44.	Definisali ste SeekBar na ekran vaše aktivnosti na sljedeći način:
+SeekBar mojSeekBar=(SeekBar)findViewByld (R. id. mojSeekBar)
+Da bi zadali maksimalnu vrijednost koju može imati gornji SeekBar poziva se metoda:
+	mojSeekBar.setMax();
+
+45.	Ulazna tačka za interakciju Android aplikacije sa korisnikom putem korisničkog interfejsa je:
+	aktivnost (activity)
+
+46.	Za razliku od drugih sistema, kod Androida nema jedne ,,ulazne tačke” u aplikaciju(ne postoji main()funkcija)
+	Tačno
+
+47.	Koju komponentu sa palete dizajn editora treba izabrati da se uključi u XML layout fajl kako bi u korisnički interfejs vaše aplikacije uključili oblast za prikazivanje web stranice?
+	WebView
+
+48.	Ukoliko želimo da iz naše Android aplikacije pošaljemo SMS, koristićemo aplikaciju za slanje SMS-A koja je već instalirana na Android uređaju, koristićemo:
+	implicitni intent
+
+49.	U kom fajlu se opisuju osnovne karakteristike aplikacije i definiše svaka njena komponenta?
+	AndroidManifest.xml
+
+50.	Kako se u XML layout fajlu zadaje da sadržaj ImageView-a bude slika.jpg?
+	android:src=@drawable/ slika
+
+51.	U res/raw folderu se nalazi audio fajl moja_muzika.mp3. Kreiran je objekat Media Player klase MediaPlayer.create(this, R.raw.ime_fajla): Započeta je reprodukcija ovog audio fajla. Ukoliko želimo da se reprodukcija automatski nastavi radimo:
+	dzuboks.set Looping(true)
+
+52.	Android Studio omogućava programiranje aplikacija korišćenjem sljedećih programskih jezika?
+	Java
+	C++
+	Kotlin
+53.	Android aplikacija može pokrenuti komponentu druge aplikacije?
+	slanjem poruke OS-u kojom se izražava namjera (intent) da se pokrene određena komponenta
+
+54.	Prije pokretanja Android aplikacije na virtuelnom uređaju (emulatoru), morate povezati pametni telefon ili tablet na vaš PC.
+	Netačno
+
+55.	Označiti tačne iskaze vezane za Android emulator?
+	pokretanje aplikacije na emulatoru traje duže nego kod realnog hardvera
+	može se konfigurisati više različitih emulatora sa odgovarajućim parametrima npr: različitim veličinama
+
+56.	Koja metoda Toast klase omogućava prikazivanje pripremljene pop-up poruke: 
+Show()
+
+57.	Šta morate uraditi da bi vaš WebView mogao prikazati web stranicu koja se nalazi na internetu?
+webView.setWebViewClient(new WebViewClient());
+
+58.	Komponenta koja omogućava sistemu da pošalje obavještenje o nekom događaju, a aplikaciji da odgovori: 
+broadcast reciver
+
+59.	U res/raw folderu se nalazi audio fajl moja_muzika... kreiran je objekat mediaplayer klase: 
+create(this,r.raw.moja_muzika); 
+
+60.	Započinjanje reprodukcije se vrši pozivom metode: 
+dzuboks.start()
+
+61.	Koji je naziv metoda MainActivity klasa koja se podešava i prikazuje ekran sa korisničkim interfejsom aplikacije: 
+SetContentView()
+
+62.	Ako želimo da se prilikom rotacije android studija ili emulatora ne mijenja orijentacija aktivnog ekrana
+android.screenOrientation='portrait'
+u fajl:
+AndrioidManifest.xml
+
+63.	Kako se dugmetu pridružuje neka akcija? 
+u xml fajlu se definiše ''onclick'' atribut povezan sa metodom koju treba pozvati kad se pritisne(npr. ''moja metoda'')
+u java kodu se napravi metoda public void moja metoda(view v) gdje v predstavlja widget koji je kliknut
+
+64.	Kako se pravi višejezična aplikacija?
+u xml-u: @string/ključ
+u javi : r.string.ključ
+
+65.	Kako se pravi lista sa različitim elementima?
+koristi se ListView kontenjer widget
+pomoću ArrayAdapter-a
+
+
+
+66.	Kako predstaviti sliku na pozadini ekrana? 
+u xml-u: android:background=“@drawable/slika“
+u javi: myView.setbackgroundresource(r.drawable.slika);
+
+67.	Kako reprodukovati audio fajl?
+MediaPlayer dzuboks=MediaPlayer.create(this,R.raw.ime_fajla)
+
+68.	Kako snimiti podatke na android uređaju?
+getSharedPreferences(„ime_fajla“,Context.MODE_PRIVATE);
+
+69.	Ekran je podjeljen u redove: 
+Vertical Linear Layout
+
+70.	Ekran je podjeljen u kolone? 
+Horizontal Linear Layout
+
+71.	Broj redova i kolona se može specificirati pomoću atributa?
+android:rowCount – redovi
+android:columnCount – kolone
+
+72.	Ako widget treba da se prostire preko npr 2 kolone, njegov atribut je: 
+android:layout_columnSpan=“2“
+
+73.	Eksplicitno pozicioniranje widgeta pomoću atributa :
+android:layout_column
+andorid:layout_row
+
+74.	Da widget zauzme čitavu ćeliju: 
+android:layout_gravity=”fill_horizontal”
+android:layout_gravity=“fill_vertical“
+
+75.	Ako želimo da se widget natpis vidi na ekranu: 
+natpis:setVisibility(View.VISIBLE)
+
+76.	Ako želimo da se widget natpis ne vidi na čitavom ekranu: 
+Natpis.setVisibility(view.INVISIBLE)
+
+77.	Ako kreirate resurs u XML fajlu(na primjer string), kako možete pristupiti tom resursu iz java koda?
+ako se string zove “moj_string”, referencira se kao R.string.moj_string
+
+78.	Ako želimo da se prilikom rotacije Android uredjaja ili emulatora ne mijenja orijentacija ekrana aktivnosti activity_main,već ----- liniju  android:screenOrientation=”portrait”  u fajl:
+AndroidManifest.xml
+
+79.	U res/raw folderu se nalazi audio fajl moj_muzika.mp3. Kreiran je objekat MediaPlayer klase: MediaPlayer muzika=MediaPlayer.create(this, R.raw.moja_muzika), Započinjanje reprodukcije se vrši pozivom metode?
+Muzika.Start()
+
+
+80.	Sta je URI?
+Uniform resource identifier
+
+81.	AndroidManifest.xml je fajl koji sadrzi…
+Karakteristike aplikacije
+
+82.	Koji layout omogucava da specificirate polozaj widgeta koristeci druge widgete kao referentne tacke?
+RelativeLyout 
+
+83.	Koju komponentu sa palete dizajn editora treba izabrati da se ukljuci xml layout…preko koga korisnik moze da umetne sliku na odgovarajuce mjesto?
+ImageView
+
+84.	Da bi napravili aplikaciju koja ima korisnički interfejs na više jezika najbolji je način da….
+umjesto stringa koji želite prikazati navedete ključ za taj string i definišete više fajlova sa resursima (jedan po jeziku) gde je za svaki ključ dat odgovarajući, prevedeni string.
+
+85.	U koji folder treba da stavite multimedijalne fajlove koje su dio vaše aplikacije?
+app/res/raw
+
+86.	Koja metoda Activity klase omogućava da preuzmete referencu na widget definisan u XML        layout fajlu (pod pretpostavkom da znate "ime" widget-a)?
+findViewById()
+
+87.	Definisali ste SeekBar na ekranu vaše aktivnosti na sljedeći način:
+SeekBar mojSeekBar=(SeekBar)findViewById(R.id.mojSeekBar);
+Da bi gornji SeekBar bio zapravo ciklična animacija, bez stvarne indikacije o progresu, potrebno je u XML fajlu zadati njegov atribut na sljedeći način: 
+android:indeterminate="true"
+
+
